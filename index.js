@@ -8,9 +8,23 @@ function mondayWork(activity = 'go to the office'){
   return `This Monday, I will ${activity}.`
 }
 
-function wrapAdjective(visualFlair = '*'){
+let wrapAdjective = function(visualFlair = '*'){
   return function(adjective = 'special'){
-    return `You are ${visualFlair}${adjective}${visualFlair}`
+    return `You are ${visualFlair}${adjective}${visualFlair}!`
   }
 }
 let encouragingPromptFunction = wrapAdjective("!!!")
+const Calculator = {
+  add: function(a,b) {
+    return a + b;
+  },
+  subtract: function(a,b) {
+    return a - b
+  },
+  multiply: function(a,b) {
+    return a * b
+  },
+  divide: function(a,b) {
+    return a / b;
+  }
+}
