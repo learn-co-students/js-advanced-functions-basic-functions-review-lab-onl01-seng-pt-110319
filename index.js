@@ -18,5 +18,24 @@ function wrapAdjective(flair = "*") {
 }
 
 let Calculator = {
+    add: function(x, y) {
+        return x + y;
+    },
+    subtract: function(x, y) {
+        return x - y
+    },
+    multiply: function(x, y) {
+        return x * y;
+    },
+    divide: function(x, y) {
+        return x / y
+    }
 
+}
+
+function actionApplyer(int, arr) {
+    for (let i = 0; i < arr.length; i++) {
+        int = arr[i](int)
+    }
+    return int
 }
